@@ -1,4 +1,3 @@
-import xml.dom.minidom
 from typing import IO, Dict, Optional, Set
 from xml.sax.saxutils import escape, quoteattr
 
@@ -289,6 +288,7 @@ class PrettyXMLSerializer(Serializer):
             self.forceRDFAbout.remove(subject)  # type: ignore[arg-type]
 
     def predicate(self, predicate, object, depth=1):
+        import xml.dom.minidom
         writer = self.writer
         store = self.store
         writer.push(predicate)

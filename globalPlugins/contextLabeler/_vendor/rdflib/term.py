@@ -38,7 +38,6 @@ __all__ = [
 import logging
 import math
 import warnings
-import xml.dom.minidom
 from base64 import b64decode, b64encode
 from binascii import hexlify, unhexlify
 from collections import defaultdict
@@ -1639,7 +1638,8 @@ class Literal(Identifier):
         return self
 
 
-def _parseXML(xmlstring: str) -> xml.dom.minidom.Document:  # noqa: N802
+def _parseXML(xmlstring: str) -> "xml.dom.minidom.Document":  # noqa: N802
+    import xml.dom.minidom
     retval = xml.dom.minidom.parseString(
         "<rdflibtoplevelelement>%s</rdflibtoplevelelement>" % xmlstring
     )
@@ -1647,7 +1647,7 @@ def _parseXML(xmlstring: str) -> xml.dom.minidom.Document:  # noqa: N802
     return retval
 
 
-def _parse_html(lexical_form: str) -> xml.dom.minidom.DocumentFragment:
+def _parse_html(lexical_form: str) -> "xml.dom.minidom.DocumentFragment":
     """
     Parse the lexical form of an HTML literal into a document fragment
     using the ``dom`` from html5lib tree builder.
@@ -1660,12 +1660,12 @@ def _parse_html(lexical_form: str) -> xml.dom.minidom.DocumentFragment:
     parser = html5lib.HTMLParser(
         tree=html5lib.treebuilders.getTreeBuilder("dom"), strict=True
     )
-    result: xml.dom.minidom.DocumentFragment = parser.parseFragment(lexical_form)
+    result: "xml.dom.minidom.DocumentFragment" = parser.parseFragment(lexical_form)
     result.normalize()
     return result
 
 
-def _write_html(value: xml.dom.minidom.DocumentFragment) -> bytes:
+def _write_html(value: "xml.dom.minidom.DocumentFragment") -> bytes:
     """
     Serialize a document fragment representing an HTML literal into
     its lexical form.
