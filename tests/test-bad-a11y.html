@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Context Labeler Test Page</title><meta charset="utf-8"></head>
+<body>
+  <h1>NVDA Context Labeler — Test Page</h1>
+
+  <h2>Unlabeled icon buttons</h2>
+  <button class="btn-save"><span aria-hidden="true">💾</span></button>
+  <button class="btn-trash"><span aria-hidden="true">🗑</span></button>
+  <button class="btn-share"><span aria-hidden="true">📤</span></button>
+  <button class="btn-mute"><span aria-hidden="true">🔇</span></button>
+
+  <h2>Images with no alt</h2>
+  <img src="https://placehold.co/100" width="100" height="100">
+  <img src="https://placehold.co/200x60?text=brand" width="200" height="60">
+
+  <h2>Ambiguous buttons</h2>
+  <button>Click here</button>
+  <button>Submit</button>
+  <button>OK</button>
+
+  <h2>Custom widgets pretending to be buttons</h2>
+  <div class="upload-button" tabindex="0" role="button"><span>⬆</span></div>
+
+  <h2>Properly labeled (control)</h2>
+  <button aria-label="Save document">💾</button>
+</body>
+</html>

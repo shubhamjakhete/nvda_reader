@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# NVDA add-on packaging output
+*.nvda-addon
+build/
+dist/
+
+# Local dev
+*.log
+.env

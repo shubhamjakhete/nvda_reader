@@ -1,0 +1,127 @@
+@prefix : <http://contextlabeler.org/ui-ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Root
+:UIElement a owl:Class ;
+    rdfs:label "UI element"@en ;
+    rdfs:comment "Any user interface element a screen reader might encounter."@en .
+
+# === Controls ===
+:Control a owl:Class ;
+    rdfs:subClassOf :UIElement ;
+    rdfs:label "control"@en .
+
+:Button a owl:Class ;
+    rdfs:subClassOf :Control ;
+    rdfs:label "button"@en .
+
+:CommandButton a owl:Class ;
+    rdfs:subClassOf :Button ;
+    rdfs:label "command button"@en ;
+    rdfs:comment "Button with text that performs an action when activated."@en .
+
+:IconButton a owl:Class ;
+    rdfs:subClassOf :Button ;
+    rdfs:label "icon button"@en ;
+    rdfs:comment "Button shown as an icon with no visible text label."@en .
+
+:ActionIconButton a owl:Class ;
+    rdfs:subClassOf :IconButton ;
+    rdfs:label "action icon button"@en ;
+    rdfs:comment "Icon button that performs a one-shot action (save, send, delete)."@en .
+
+:ToggleIconButton a owl:Class ;
+    rdfs:subClassOf :IconButton ;
+    rdfs:label "toggle icon button"@en ;
+    rdfs:comment "Icon button representing a binary state (mute/unmute, play/pause)."@en .
+
+:Input a owl:Class ;
+    rdfs:subClassOf :Control ;
+    rdfs:label "input field"@en .
+
+:TextInput a owl:Class ;
+    rdfs:subClassOf :Input ;
+    rdfs:label "text input"@en .
+
+:SearchInput a owl:Class ;
+    rdfs:subClassOf :Input ;
+    rdfs:label "search input"@en .
+
+:Selector a owl:Class ;
+    rdfs:subClassOf :Control ;
+    rdfs:label "selector"@en .
+
+:Dropdown a owl:Class ;
+    rdfs:subClassOf :Selector ;
+    rdfs:label "dropdown"@en .
+
+:Checkbox a owl:Class ;
+    rdfs:subClassOf :Selector ;
+    rdfs:label "checkbox"@en .
+
+:RadioButton a owl:Class ;
+    rdfs:subClassOf :Selector ;
+    rdfs:label "radio button"@en .
+
+# === Display ===
+:Display a owl:Class ;
+    rdfs:subClassOf :UIElement ;
+    rdfs:label "display element"@en .
+
+:Image a owl:Class ;
+    rdfs:subClassOf :Display ;
+    rdfs:label "image"@en .
+
+:DecorativeImage a owl:Class ;
+    rdfs:subClassOf :Image ;
+    rdfs:label "decorative image"@en ;
+    rdfs:comment "Image that conveys no information; safe to ignore."@en .
+
+:InformativeImage a owl:Class ;
+    rdfs:subClassOf :Image ;
+    rdfs:label "informative image"@en ;
+    rdfs:comment "Image that conveys meaningful content (chart, photo, diagram)."@en .
+
+:FunctionalImage a owl:Class ;
+    rdfs:subClassOf :Image ;
+    rdfs:label "functional image"@en ;
+    rdfs:comment "Image that acts as a clickable control."@en .
+
+:Icon a owl:Class ;
+    rdfs:subClassOf :Display ;
+    rdfs:label "icon"@en .
+
+:StatusIcon a owl:Class ;
+    rdfs:subClassOf :Icon ;
+    rdfs:label "status icon"@en ;
+    rdfs:comment "Icon indicating state (online, error, loading)."@en .
+
+:BrandIcon a owl:Class ;
+    rdfs:subClassOf :Icon ;
+    rdfs:label "brand icon"@en ;
+    rdfs:comment "Logo or brand mark."@en .
+
+# === Navigation ===
+:Navigation a owl:Class ;
+    rdfs:subClassOf :UIElement ;
+    rdfs:label "navigation element"@en .
+
+:Link a owl:Class ;
+    rdfs:subClassOf :Navigation ;
+    rdfs:label "link"@en .
+
+:Tab a owl:Class ;
+    rdfs:subClassOf :Navigation ;
+    rdfs:label "tab"@en .
+
+:MenuItem a owl:Class ;
+    rdfs:subClassOf :Navigation ;
+    rdfs:label "menu item"@en .
+
+# === Unknown sentinel ===
+:Unknown a owl:Class ;
+    rdfs:subClassOf :UIElement ;
+    rdfs:label "unknown element"@en ;
+    rdfs:comment "Fallback when the element does not fit any other category."@en .
