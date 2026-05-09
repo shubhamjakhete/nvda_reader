@@ -38,6 +38,7 @@ __all__ = [
 import logging
 import math
 import warnings
+import xml.dom.minidom
 from base64 import b64decode, b64encode
 from binascii import hexlify, unhexlify
 from collections import defaultdict

@@ -3,6 +3,32 @@ _VENDOR = os.path.join(os.path.dirname(__file__), "_vendor")
 if _VENDOR not in sys.path:
     sys.path.insert(0, _VENDOR)
 
+# NVDA ships a stripped Python that lacks xml.dom. Inject stubs before rdflib loads.
+try:
+    import xml.dom.minidom
+except ImportError:
+    import types as _types
+    _minidom = _types.ModuleType("xml.dom.minidom")
+    for _n in ("Attr", "Comment", "Document", "DocumentFragment", "DocumentType",
+               "Element", "Entity", "Node", "Notation", "ProcessingInstruction", "Text"):
+        setattr(_minidom, _n, type(_n, (), {}))
+    _minidom.parseString = lambda s: _minidom.Document()
+    sys.modules["xml.dom.minidom"] = _minidom
+    if "xml.dom" not in sys.modules:
+        _xml_dom = _types.ModuleType("xml.dom")
+        _xml_dom.XML_NAMESPACE = "http://www.w3.org/XML/1998/namespace"
+        _xml_dom.minidom = _minidom
+        sys.modules["xml.dom"] = _xml_dom
+        if "xml" not in sys.modules:
+            _xml = _types.ModuleType("xml")
+            _xml.dom = _xml_dom
+            sys.modules["xml"] = _xml
+        else:
+            sys.modules["xml"].dom = _xml_dom
+    else:
+        sys.modules["xml.dom"].minidom = _minidom
+    del _types, _minidom, _n
+
 # NVDA modules are only available inside NVDA — guarded for Mac-side unit testing
 try:
     import globalPluginHandler
