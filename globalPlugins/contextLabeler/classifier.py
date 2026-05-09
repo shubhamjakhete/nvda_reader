@@ -10,16 +10,18 @@ SYSTEM_PROMPT_TEMPLATE = """You are classifying UI elements for a screen reader 
 
 Your task: given metadata about a focused UI element that has no accessible label,
 return a JSON object with two fields:
-  - "category": one of the URIs from the allowed list below
-  - "label": a short (1-4 word) human-readable label
+  - "category": the URI (starting with colon) from the allowed list below
+  - "label": a short (1-4 word) human-readable label describing what this specific element does
 
-Allowed category URIs (you MUST pick one of these exactly):
+Allowed categories (pick the most specific match):
 {allowed_uris}
 
 Rules:
 - Output ONLY a single JSON object. No prose, no markdown, no code fences.
-- "label" must be lowercase, no punctuation.
-- If you cannot determine a label, use category ":Unknown" and label "unlabeled element".
+- "category" must be copied exactly as written above (including the colon prefix).
+- "label" must be lowercase, no punctuation, describe the specific action or content.
+- Toggle buttons (mute, play/pause, like, follow) → use ToggleIconButton, not ActionIconButton.
+- If you cannot determine a label, use ":Unknown" and label "unlabeled element".
 """
 
 USER_PROMPT_TEMPLATE = """Element metadata:
@@ -37,13 +39,14 @@ USER_PROMPT_TEMPLATE = """Element metadata:
 Classify this element."""
 
 
-def classify(ctx: dict, allowed_uris: list, api_key: str) -> dict:
+def classify(ctx: dict, allowed_uris: list, api_key: str, descriptions: list = None) -> dict:
     """
     Call Claude. Return {"category": URI, "label": str}.
     Raises ValueError for HTTP errors so caller can handle per error code.
     Raises json.JSONDecodeError or KeyError on malformed responses.
     """
-    system = SYSTEM_PROMPT_TEMPLATE.format(allowed_uris="\n".join(allowed_uris))
+    uri_list = descriptions if descriptions else allowed_uris
+    system = SYSTEM_PROMPT_TEMPLATE.format(allowed_uris="\n".join(uri_list))
     user = USER_PROMPT_TEMPLATE.format(
         role=ctx.get("role", ""),
         name=ctx.get("name", ""),

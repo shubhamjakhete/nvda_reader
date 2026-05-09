@@ -81,7 +81,8 @@ if _NVDA_AVAILABLE:
                     ui.message("Context Labeler: API key not set in settings")
                     return
                 allowed_uris = self._ontology.leaf_uris()
-                result = classifier.classify(ctx, allowed_uris, api_key)
+                descriptions = self._ontology.leaf_descriptions()
+                result = classifier.classify(ctx, allowed_uris, api_key, descriptions)
                 if not self._ontology.is_valid_leaf(result["category"]):
                     log.warning(f"Claude returned invalid category: {result['category']}")
                     ui.message("unlabeled element — could not classify")
