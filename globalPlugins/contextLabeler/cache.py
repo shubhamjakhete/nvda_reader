@@ -17,6 +17,8 @@ def make_key(ctx: dict) -> str:
         ctx.get("app_name", ""),
         ctx.get("window_class", ""),
         ctx.get("role", ""),
+        ctx.get("name", ""),
+        ctx.get("html_class", ""),
         ctx.get("parent_name", ""),
         ctx.get("window_text", "")[:50],
     ])
