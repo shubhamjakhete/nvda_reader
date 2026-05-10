@@ -24,6 +24,15 @@ def extract(obj) -> dict:
     window_text = safe(lambda: obj.windowText)
     app_name = safe(lambda: obj.appModule.appName)
 
+    # For web content, pull HTML class attribute from IA2 (IAccessible2)
+    html_class = ""
+    try:
+        attrs = obj.IA2Attributes
+        if attrs:
+            html_class = attrs.get("class", "") or attrs.get("html-class", "")
+    except Exception:
+        pass
+
     parent = None
     try:
         parent = obj.parent
@@ -71,6 +80,7 @@ def extract(obj) -> dict:
         "description": description,
         "window_class": window_class,
         "window_text": window_text,
+        "html_class": html_class,
         "app_name": app_name,
         "parent_name": parent_name,
         "parent_role": parent_role,

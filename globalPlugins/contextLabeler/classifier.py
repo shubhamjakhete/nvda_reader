@@ -30,6 +30,7 @@ USER_PROMPT_TEMPLATE = """Element metadata:
 - Role: {role}
 - Name: {name}
 - Description: {description}
+- HTML class: {html_class}
 - Window class: {window_class}
 - Window text: {window_text}
 - App: {app_name}
@@ -53,6 +54,7 @@ def classify(ctx: dict, allowed_uris: list, api_key: str, descriptions: list = N
         role=ctx.get("role", ""),
         name=ctx.get("name", ""),
         description=ctx.get("description", ""),
+        html_class=ctx.get("html_class", ""),
         window_class=ctx.get("window_class", ""),
         window_text=ctx.get("window_text", ""),
         app_name=ctx.get("app_name", ""),
