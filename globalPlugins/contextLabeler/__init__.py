@@ -83,6 +83,11 @@ if _NVDA_AVAILABLE:
                 allowed_uris = self._ontology.leaf_uris()
                 descriptions = self._ontology.leaf_descriptions()
                 result = classifier.classify(ctx, allowed_uris, api_key, descriptions)
+                category = result["category"]
+                # Claude returns short form ":Foo" — expand to full URI for validation
+                if category.startswith(":"):
+                    category = "http://contextlabeler.org/ui-ontology#" + category[1:]
+                    result["category"] = category
                 if not self._ontology.is_valid_leaf(result["category"]):
                     log.warning(f"Claude returned invalid category: {result['category']}")
                     ui.message("unlabeled element — could not classify")
