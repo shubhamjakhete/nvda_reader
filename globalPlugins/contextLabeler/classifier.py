@@ -20,6 +20,8 @@ Rules:
 - Output ONLY a single JSON object. No prose, no markdown, no code fences.
 - "category" must be copied exactly as written above (including the colon prefix).
 - "label" must be lowercase, no punctuation, describe the specific action or content.
+- If Name is non-empty, the element has visible text — use CommandButton (not an icon category), and use that text as the label.
+- Only use IconButton categories (ActionIconButton, ToggleIconButton) when Name is empty.
 - Toggle buttons (mute, play/pause, like, follow) → use ToggleIconButton, not ActionIconButton.
 - If you cannot determine a label, use ":Unknown" and label "unlabeled element".
 """
