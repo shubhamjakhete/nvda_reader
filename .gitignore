@@ -21,3 +21,9 @@ dist/
 # Local dev
 *.log
 .env
+
+# Internal agent / Conductor files
+CLAUDE.md
+DESIGN.md
+.conductor/
+.context/
