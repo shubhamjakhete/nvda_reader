@@ -57,6 +57,8 @@ if _NVDA_AVAILABLE:
             gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(
                 settings.ContextLabelerPanel
             )
+            self._vscode_ttl = os.path.join(os.path.dirname(__file__), "vscode.ttl")
+            self._vscode_loaded = False
 
         def terminate(self):
             gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(
@@ -71,6 +73,9 @@ if _NVDA_AVAILABLE:
             try:
                 obj = api.getFocusObject()
                 ctx = context.extract(obj)
+                if ctx.get("app_name") == "code" and not self._vscode_loaded:
+                    self._ontology.load_supplement(self._vscode_ttl)
+                    self._vscode_loaded = True
                 key = cache.make_key(ctx)
                 cached = self._cache.lookup(key)
                 if cached:

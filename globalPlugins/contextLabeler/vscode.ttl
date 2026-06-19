@@ -1,0 +1,64 @@
+@prefix :   <http://contextlabeler.org/ui-ontology#> .
+@prefix cl: <http://contextlabeler.org/ui-ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# VS Code supplement ontology — additive extension of ontology.ttl.
+# All nine classes subclass existing leaf-adjacent classes from the base ontology.
+# NavigationButton does not exist in the base ontology; :Link is the nearest
+# Navigation-branch leaf and is used for VSCodeTreeItem and VSCodeBreadcrumb.
+
+:VSCodeActivityBarIcon a owl:Class ;
+    rdfs:subClassOf :ActionIconButton ;
+    rdfs:label "activity bar icon"@en ;
+    rdfs:comment "Left-sidebar icon button that switches between Explorer, Search, Source Control, Run and Debug, and Extensions views."@en ;
+    cl:rationale "activity bar, sidebar switcher, explorer, source control, extensions, run, debug, view container"@en .
+
+:VSCodeEditorTab a owl:Class ;
+    rdfs:subClassOf :Tab ;
+    rdfs:label "editor tab"@en ;
+    rdfs:comment "Tab representing an open file in the editor group; shows filename and dirty indicator."@en ;
+    cl:rationale "editor tab, open file, editor group, dirty dot, close tab, split editor, tab bar"@en .
+
+:VSCodePanelTab a owl:Class ;
+    rdfs:subClassOf :Tab ;
+    rdfs:label "panel tab"@en ;
+    rdfs:comment "Tab in the bottom panel that switches between Terminal, Problems, Output, and Debug Console."@en ;
+    cl:rationale "panel tab, terminal, problems, output, debug console, bottom panel"@en .
+
+:VSCodeStatusBarItem a owl:Class ;
+    rdfs:subClassOf :StatusIcon ;
+    rdfs:label "status bar item"@en ;
+    rdfs:comment "Status bar entry showing git branch, language mode, line and column, encoding, error and warning counts, or extension-provided state."@en ;
+    cl:rationale "status bar, git branch, language mode, line column, encoding, error count, warning count, remote"@en .
+
+:VSCodeCodeAction a owl:Class ;
+    rdfs:subClassOf :ActionIconButton ;
+    rdfs:label "code action"@en ;
+    rdfs:comment "Quick-fix lightbulb or refactor icon that appears in the editor gutter when a code action is available."@en ;
+    cl:rationale "code action, quick fix, lightbulb, refactor, gutter icon, error squiggle, suggestion"@en .
+
+:VSCodeTreeItem a owl:Class ;
+    rdfs:subClassOf :Link ;
+    rdfs:label "tree item"@en ;
+    rdfs:comment "Navigable row in a tree view such as the file explorer, outline, source control changes, or extension-provided tree."@en ;
+    cl:rationale "tree item, file explorer, outline, source control change, treeview row, expand collapse, chevron"@en .
+
+:VSCodeTerminalControl a owl:Class ;
+    rdfs:subClassOf :ActionIconButton ;
+    rdfs:label "terminal control"@en ;
+    rdfs:comment "Icon button in the terminal toolbar for actions such as new terminal, split terminal, kill terminal, and maximize panel."@en ;
+    cl:rationale "terminal control, new terminal, split terminal, kill terminal, maximize panel, terminal toolbar"@en .
+
+:VSCodeBreadcrumb a owl:Class ;
+    rdfs:subClassOf :Link ;
+    rdfs:label "breadcrumb"@en ;
+    rdfs:comment "Segment in the file/symbol breadcrumb trail displayed above the editor showing the current file path and symbol hierarchy."@en ;
+    cl:rationale "breadcrumb, file path, symbol path, breadcrumb trail, editor breadcrumb, navigate up"@en .
+
+:VSCodeEditorGroupAction a owl:Class ;
+    rdfs:subClassOf :ActionIconButton ;
+    rdfs:label "editor group action"@en ;
+    rdfs:comment "Icon button in the editor group header for actions such as split editor, close all editors, and move editor to another group."@en ;
+    cl:rationale "editor group, split editor, close all, move editor, editor layout, editor header action"@en .

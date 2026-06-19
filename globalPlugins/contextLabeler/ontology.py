@@ -51,3 +51,16 @@ class Ontology:
             (str(row.ancestor), str(row.label))
             for row in self._g.query(ANCESTORS, initBindings={"node": URIRef(uri)})
         ]
+
+    def load_supplement(self, path: str) -> None:
+        """Merge an additional Turtle ontology file into the existing graph.
+        Fails silently; base ontology remains intact on any parse error.
+        Calling this twice with the same file is safe since RDFLib triple stores are sets."""
+        try:
+            self._g.parse(path, format="turtle")
+        except Exception as e:
+            try:
+                from logHandler import log
+                log.warning(f"contextLabeler: failed to load supplement {path}: {e}")
+            except Exception:
+                pass

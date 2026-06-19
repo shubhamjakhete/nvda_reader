@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus — Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #1a1a2e;
+      --sidebar:   #16213e;
+      --main:      #0f3460;
+      --accent:    #e94560;
+      --accent-dim:#b33349;
+      --text:      #e0e0e0;
+      --text-muted:#8892a4;
+      --border:    rgba(255,255,255,0.07);
+      --hover:     rgba(255,255,255,0.06);
+      --active:    rgba(233,69,96,0.18);
+      --radius:    8px;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+      overflow: hidden;
+    }
+
+    /* ── Layout shell ── */
+    .app-shell {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 60px 1fr;
+      height: 100vh;
+    }
+
+    /* ── Focus ring (global) ── */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* ════════════════════════════════════════════
+       SECTION 1 — Call controls toolbar
+    ════════════════════════════════════════════ */
+    .call-toolbar {
+      grid-column: 1 / -1;
+      background: #12122a;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      position: relative;
+    }
+
+    .call-toolbar .toolbar-left {
+      position: absolute;
+      left: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .call-toolbar .toolbar-left .dot {
+      width: 8px; height: 8px;
+      background: #3ba55d;
+      border-radius: 50%;
+    }
+
+    .call-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: 20px;
+      border: none;
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, transform 0.1s;
+    }
+
+    .call-btn:hover {
+      background: rgba(255,255,255,0.16);
+      transform: scale(1.06);
+    }
+
+    .call-btn svg { width: 18px; height: 18px; pointer-events: none; }
+
+    .btn-end-call {
+      background: var(--accent) !important;
+      color: #fff !important;
+      width: 48px; height: 40px;
+      border-radius: 20px;
+    }
+
+    .btn-end-call:hover {
+      background: var(--accent-dim) !important;
+    }
+
+    .btn-mute.active, .btn-deafen.active, .btn-video.active {
+      background: rgba(233,69,96,0.25);
+      color: var(--accent);
+    }
+
+    /* ════════════════════════════════════════════
+       SECTION 2 — Sidebar tab strip
+    ════════════════════════════════════════════ */
+    .sidebar {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      background: var(--sidebar);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px 0;
+      gap: 4px;
+    }
+
+    .sidebar-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px; height: 44px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: color 0.15s, background 0.15s;
+      border-left: 3px solid transparent;
+      margin-left: -3px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .sidebar-tab:hover {
+      background: var(--hover);
+      color: var(--text);
+    }
+
+    .sidebar-tab.active {
+      background: var(--active);
+      color: var(--accent);
+      border-left-color: var(--accent);
+    }
+
+    .sidebar-tab svg { width: 20px; height: 20px; pointer-events: none; }
+
+    /* ════════════════════════════════════════════
+       SECTION 3 + 4 — Main content area
+    ════════════════════════════════════════════ */
+    .main-content {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      background: var(--main);
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 0;
+    }
+
+    .content-center {
+      padding: 28px 28px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* ── Section header ── */
+    .section-header {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: -8px;
+    }
+
+    /* ── Nav card grid (Section 3) ── */
+    .nav-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .nav-card {
+      display: block;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-card:hover {
+      border-color: rgba(233,69,96,0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .nav-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    .nav-card .card-footer {
+      background: rgba(0,0,0,0.35);
+      padding: 8px 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ── Recent Files widget (Section 6) ── */
+    .recent-files-panel {
+      background: rgba(0,0,0,0.2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .recent-files-panel h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .file-listbox {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .file-option {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+
+    .file-option:hover {
+      background: var(--hover);
+    }
+
+    .file-option svg { width: 20px; height: 20px; pointer-events: none; }
+
+    /* ── Right panel: compose + labeled search ── */
+    .right-panel {
+      background: rgba(0,0,0,0.15);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .right-panel-top {
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+    }
+
+    /* ── Search (labeled, Section: mixed) ── */
+    .search-wrap {
+      position: relative;
+    }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 10px; top: 50%;
+      transform: translateY(-50%);
+      width: 15px; height: 15px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+      padding: 8px 12px 8px 32px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+
+    .search-input::placeholder { color: var(--text-muted); }
+
+    /* ── Compose panel (Section 4) ── */
+    .compose-panel {
+      background: #12122a;
+      border-top: 1px solid var(--border);
+      border-radius: 12px 12px 0 0;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    .compose-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: rgba(233,69,96,0.12);
+      border-bottom: 1px solid var(--border);
+      border-radius: 12px 12px 0 0;
+    }
+
+    .compose-header h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .compose-icon-btns {
+      display: flex;
+      gap: 4px;
+    }
+
+    .compose-icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      border-radius: var(--radius);
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: background 0.12s, color 0.12s;
+    }
+
+    .compose-icon-btn:hover {
+      background: var(--hover);
+      color: var(--text);
+    }
+
+    .compose-icon-btn svg { width: 15px; height: 15px; pointer-events: none; }
+
+    .compose-body {
+      padding: 10px 14px 14px;
+    }
+
+    .compose-to {
+      font-size: 12px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+    }
+
+    .compose-textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+      resize: none;
+      height: 90px;
+      outline: none;
+      line-height: 1.5;
+    }
+
+    .compose-textarea::placeholder { color: var(--text-muted); }
+
+    .compose-footer {
+      display: flex;
+      gap: 4px;
+      padding: 8px 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ════════════════════════════════════════════
+       SECTION 5 — Status bar
+    ════════════════════════════════════════════ */
+    .status-bar {
+      grid-column: 1 / -1;
+      background: #0d0d1f;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 16px;
+      height: 28px;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: 'Courier New', monospace;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status-item span[role="img"] svg {
+      width: 13px; height: 13px;
+      vertical-align: middle;
+    }
+
+    .status-item span[role="img"] {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .spin svg { animation: spin 2s linear infinite; }
+
+    /* ════════════════════════════════════════════
+       Floating badge
+    ════════════════════════════════════════════ */
+    .demo-badge {
+      position: fixed;
+      top: 60px;
+      right: 16px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 12px;
+      z-index: 9999;
+      box-shadow: 0 2px 12px rgba(233,69,96,0.5);
+      pointer-events: none;
+      text-transform: uppercase;
+    }
+
+    /* ── Labeled misc buttons ── */
+    .labeled-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .icon-labeled-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px; height: 34px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: background 0.12s, color 0.12s;
+    }
+
+    .icon-labeled-btn:hover { background: var(--hover); color: var(--text); }
+    .icon-labeled-btn svg { width: 16px; height: 16px; pointer-events: none; }
+
+    .signout-btn {
+      margin-left: auto;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.12s, color 0.12s;
+    }
+
+    .signout-btn:hover { background: var(--hover); color: var(--text); }
+
+    .help-link {
+      color: var(--text-muted);
+      font-size: 12px;
+      text-decoration: none;
+      transition: color 0.12s;
+    }
+
+    .help-link:hover { color: var(--text); }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
+    /* ── Fake channel list for visual fidelity ── */
+    .channel-list { padding: 16px 0; }
+
+    .channel-section-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding: 0 16px 6px;
+    }
+
+    .channel-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 16px;
+      cursor: pointer;
+      border-radius: var(--radius);
+      margin: 0 4px;
+      color: var(--text-muted);
+      font-size: 13px;
+      transition: background 0.1s, color 0.1s;
+    }
+
+    .channel-item:hover { background: var(--hover); color: var(--text); }
+    .channel-item.unread { color: var(--text); font-weight: 500; }
+
+    .channel-item svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .unread-dot {
+      margin-left: auto;
+      width: 7px; height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ── Floating badge ── -->
+  <div class="demo-badge">contextLabeler Demo</div>
+
+  <div class="app-shell">
+
+    <!-- ══════════════════════════════════════════
+         SECTION 1 — Call controls toolbar
+    ══════════════════════════════════════════ -->
+    <div class="call-toolbar" role="toolbar">
+      <div class="toolbar-left">
+        <div class="dot"></div>
+        <span>General · 4 participants</span>
+      </div>
+
+      <!-- Unlabeled icon-only call buttons -->
+      <button class="call-btn btn-mute">
+        <i data-lucide="mic"></i>
+      </button>
+      <button class="call-btn btn-deafen">
+        <i data-lucide="mic-off"></i>
+      </button>
+      <button class="call-btn btn-video">
+        <i data-lucide="video"></i>
+      </button>
+      <button class="call-btn btn-video-off">
+        <i data-lucide="video-off"></i>
+      </button>
+      <button class="call-btn btn-screenshare">
+        <i data-lucide="monitor"></i>
+      </button>
+      <button class="call-btn btn-reactions">
+        <i data-lucide="smile-plus"></i>
+      </button>
+      <button class="call-btn btn-participants">
+        <i data-lucide="users"></i>
+      </button>
+      <button class="call-btn btn-chat">
+        <i data-lucide="message-square"></i>
+      </button>
+      <button class="call-btn btn-end-call">
+        <i data-lucide="phone-off"></i>
+      </button>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 2 — Sidebar tab strip
+    ══════════════════════════════════════════ -->
+    <nav class="sidebar" role="tablist">
+      <!-- Unlabeled div[role="tab"] elements -->
+      <div role="tab" class="sidebar-tab tab-inbox active" tabindex="0">
+        <i data-lucide="inbox"></i>
+      </div>
+      <div role="tab" class="sidebar-tab tab-sent" tabindex="0">
+        <i data-lucide="send"></i>
+      </div>
+      <div role="tab" class="sidebar-tab tab-drafts" tabindex="0">
+        <i data-lucide="file-text"></i>
+      </div>
+      <div role="tab" class="sidebar-tab tab-starred" tabindex="0">
+        <i data-lucide="star"></i>
+      </div>
+      <div role="tab" class="sidebar-tab tab-archive" tabindex="0">
+        <i data-lucide="archive"></i>
+      </div>
+      <div role="tab" class="sidebar-tab tab-trash" tabindex="0">
+        <i data-lucide="trash-2"></i>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════════
+         MAIN CONTENT (Sections 3, 4, 6)
+    ══════════════════════════════════════════ -->
+    <main class="main-content">
+
+      <!-- ── Center column ── -->
+      <div class="content-center">
+
+        <!-- Labeled controls strip (mixed labeled elements) -->
+        <div class="labeled-controls">
+          <div class="search-wrap" style="flex:1; max-width:220px;">
+            <i data-lucide="search" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--text-muted);pointer-events:none;"></i>
+            <input
+              type="search"
+              class="search-input"
+              aria-label="Search"
+              placeholder="Search…"
+            />
+          </div>
+          <button class="icon-labeled-btn" aria-label="Settings">
+            <i data-lucide="settings"></i>
+          </button>
+          <a href="#" class="help-link" aria-label="Help and documentation">
+            <i data-lucide="help-circle" style="width:16px;height:16px;vertical-align:middle;"></i>
+          </a>
+          <button class="signout-btn">Sign out</button>
+        </div>
+
+        <!-- ── SECTION 3 — Image nav cards ── -->
+        <div>
+          <div class="section-header">Quick Access</div>
+
+          <div class="nav-grid" style="margin-top:12px;">
+
+            <!-- Brand logo card (blue square, FunctionalImage/BrandIcon) -->
+            <a class="nav-card" href="#">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect width='200' height='150' fill='%231a56db'/%3E%3Ccircle cx='80' cy='75' r='35' fill='%230a2fa8' opacity='.7'/%3E%3Ccircle cx='130' cy='75' r='35' fill='%230a2fa8' opacity='.7'/%3E%3Ccircle cx='105' cy='55' r='28' fill='%23356cf5' opacity='.8'/%3E%3C/svg%3E"
+                alt=""
+              />
+              <div class="card-footer">Nexus Cloud</div>
+            </a>
+
+            <!-- Twitter/X card (black square, social icon) -->
+            <a class="nav-card" href="#">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect width='200' height='150' fill='%23000000'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='72' fill='white'%3EX%3C/text%3E%3C/svg%3E"
+                alt=""
+              />
+              <div class="card-footer">Social Feed</div>
+            </a>
+
+            <!-- Product thumbnail (green square) -->
+            <a class="nav-card" href="#">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect width='200' height='150' fill='%2316a34a'/%3E%3Crect x='30' y='30' width='60' height='90' rx='8' fill='%23bbf7d0' opacity='.7'/%3E%3Crect x='110' y='50' width='60' height='70' rx='8' fill='%23bbf7d0' opacity='.5'/%3E%3Crect x='55' y='20' width='90' height='12' rx='4' fill='%2386efac'/%3E%3C/svg%3E"
+                alt=""
+              />
+              <div class="card-footer">Analytics</div>
+            </a>
+
+            <!-- Profile avatar (purple circle) -->
+            <a class="nav-card" href="#">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect width='200' height='150' fill='%237c3aed'/%3E%3Ccircle cx='100' cy='60' r='30' fill='%23c4b5fd'/%3E%3Cellipse cx='100' cy='130' rx='45' ry='30' fill='%23c4b5fd' opacity='.6'/%3E%3C/svg%3E"
+                alt=""
+              />
+              <div class="card-footer">My Profile</div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ── SECTION 6 — Recent Files widget ── -->
+        <div class="recent-files-panel">
+          <h3>Recent Files</h3>
+          <div class="file-listbox" role="listbox">
+
+            <div role="option" class="file-option" tabindex="0">
+              <i data-lucide="file" style="color:#93c5fd;"></i>
+            </div>
+            <div role="option" class="file-option" tabindex="0">
+              <i data-lucide="file-code" style="color:#86efac;"></i>
+            </div>
+            <div role="option" class="file-option" tabindex="0">
+              <i data-lucide="file-image" style="color:#fdba74;"></i>
+            </div>
+            <div role="option" class="file-option" tabindex="0">
+              <i data-lucide="file-video" style="color:#f9a8d4;"></i>
+            </div>
+            <div role="option" class="file-option" tabindex="0">
+              <i data-lucide="file-audio" style="color:#c4b5fd;"></i>
+            </div>
+            <div role="option" class="file-option" tabindex="0">
+              <i data-lucide="file-archive" style="color:#fde68a;"></i>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Right column (compose + misc) ── -->
+      <div class="right-panel">
+        <div class="right-panel-top">
+
+          <!-- Fake channel/thread list for visual richness -->
+          <div class="channel-list">
+            <div class="channel-section-label">Threads</div>
+            <div class="channel-item unread">
+              <i data-lucide="hash"></i>
+              <span>engineering</span>
+              <span class="unread-dot"></span>
+            </div>
+            <div class="channel-item">
+              <i data-lucide="hash"></i>
+              <span>design</span>
+            </div>
+            <div class="channel-item unread">
+              <i data-lucide="hash"></i>
+              <span>product</span>
+              <span class="unread-dot"></span>
+            </div>
+            <div class="channel-item">
+              <i data-lucide="lock"></i>
+              <span>leadership</span>
+            </div>
+            <div class="channel-item">
+              <i data-lucide="hash"></i>
+              <span>random</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ══════════════════════════════════════
+             SECTION 4 — Compose panel
+        ══════════════════════════════════════ -->
+        <div class="compose-panel">
+          <div class="compose-header">
+            <h3>New Message</h3>
+            <div class="compose-icon-btns">
+              <!-- Unlabeled icon-only compose buttons -->
+              <button class="compose-icon-btn btn-format">
+                <i data-lucide="type"></i>
+              </button>
+              <button class="compose-icon-btn btn-attach">
+                <i data-lucide="paperclip"></i>
+              </button>
+              <button class="compose-icon-btn btn-discard">
+                <i data-lucide="trash-2"></i>
+              </button>
+            </div>
+          </div>
+          <div class="compose-body">
+            <div class="compose-to">To: team@nexus.io</div>
+            <textarea
+              class="compose-textarea"
+              placeholder="Write your message…"
+            ></textarea>
+          </div>
+          <div class="compose-footer">
+            <button class="compose-icon-btn btn-send" style="color:var(--accent);">
+              <i data-lucide="send"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 5 — Status bar
+    ══════════════════════════════════════════ -->
+    <footer class="status-bar">
+
+      <span class="status-item">
+        <span role="img"><i data-lucide="battery"></i></span>
+        87%
+      </span>
+
+      <span class="status-item">
+        <span role="img"><i data-lucide="wifi"></i></span>
+        Connected
+      </span>
+
+      <span class="status-item">
+        <span role="img"><i data-lucide="bell"></i></span>
+        3 new
+      </span>
+
+      <span class="status-item spin">
+        <span role="img"><i data-lucide="refresh-cw"></i></span>
+        Syncing…
+      </span>
+
+      <span class="status-item">
+        <span role="img"><i data-lucide="signal"></i></span>
+        Strong
+      </span>
+
+      <span style="margin-left:auto; font-size:11px; color:var(--text-muted);">
+        Nexus Workspace · v2.4.1
+      </span>
+
+    </footer>
+
+  </div><!-- /.app-shell -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+
+      // ── Tab toggle (sidebar) ──
+      document.querySelectorAll('.sidebar-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.sidebar-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+        });
+        tab.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            tab.click();
+          }
+        });
+      });
+
+      // ── Call button mute/unmute toggle ──
+      document.querySelector('.btn-mute')?.addEventListener('click', function () {
+        this.classList.toggle('active');
+      });
+      document.querySelector('.btn-deafen')?.addEventListener('click', function () {
+        this.classList.toggle('active');
+      });
+      document.querySelector('.btn-video')?.addEventListener('click', function () {
+        this.classList.toggle('active');
+      });
+
+      // ── File option selection ──
+      document.querySelectorAll('.file-option').forEach(opt => {
+        opt.addEventListener('click', () => {
+          document.querySelectorAll('.file-option').forEach(o => {
+            o.style.background = '';
+          });
+          opt.style.background = 'rgba(233,69,96,0.18)';
+        });
+        opt.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            opt.click();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
