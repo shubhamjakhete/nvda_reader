@@ -43,6 +43,7 @@ except ImportError:
     _NVDA_AVAILABLE = False
 
 from .ontology import Ontology
+from . import speech
 
 
 if _NVDA_AVAILABLE:
@@ -92,13 +93,19 @@ if _NVDA_AVAILABLE:
                 # Claude returns short form ":Foo" — expand to full URI for validation
                 if category.startswith(":"):
                     category = "http://contextlabeler.org/ui-ontology#" + category[1:]
-                    result["category"] = category
-                if not self._ontology.is_valid_leaf(result["category"]):
-                    log.warning(f"Claude returned invalid category: {result['category']}")
-                    ui.message("unlabeled element — could not classify")
-                    return
-                human_category = self._ontology.label_for(result["category"])
-                speakable = f"{result['label']} — {human_category}"
+                if self._ontology.is_valid_leaf(category):
+                    tier = speech.TIER_UNVERIFIED if category.endswith("#Unknown") else speech.TIER_VERIFIED
+                    spoken_class = self._ontology.label_for(category)
+                else:
+                    ancestor = self._ontology.nearest_valid_ancestor(category)
+                    if ancestor:
+                        tier = speech.TIER_PARTIAL
+                        spoken_class = self._ontology.label_for(ancestor)
+                        log.warning(f"contextLabeler: invalid leaf {category}, fell back to {ancestor}")
+                    else:
+                        tier = speech.TIER_UNVERIFIED
+                        spoken_class = ""
+                speakable = speech.compose(result["label"], spoken_class, tier)
                 self._cache.store(key, speakable)
                 ui.message(speakable)
             except Exception as e:
