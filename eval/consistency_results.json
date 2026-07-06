@@ -1,0 +1,1898 @@
+{
+  "metrics": {
+    "n_entries": 55,
+    "runs_per_entry": 10,
+    "avg_category_agreement_rate": 0.984,
+    "avg_distinct_labels_per_entry": 1.62,
+    "pct_entries_with_validity_flip": 0.0
+  },
+  "per_entry": {
+    "bad-save-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "save",
+        "save",
+        "save",
+        "save",
+        "save",
+        "save",
+        "save",
+        "save",
+        "save",
+        "save"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "bad-trash-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "bad-share-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "share",
+        "share",
+        "share",
+        "share",
+        "share",
+        "share",
+        "share",
+        "share",
+        "share",
+        "share"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "bad-mute-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "bad-img-decorative-001": {
+      "tags": [
+        "image",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage"
+      ],
+      "labels": [
+        "decorative graphic",
+        "unlabeled graphic",
+        "decorative graphic",
+        "unlabeled graphic",
+        "decorative graphic",
+        "decorative image",
+        "decorative graphic",
+        "unlabeled graphic",
+        "unlabeled graphic",
+        "unlabeled graphic"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#DecorativeImage",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 3,
+      "has_validity_flip": false
+    },
+    "bad-img-brand-001": {
+      "tags": [
+        "image",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage",
+        "http://contextlabeler.org/ui-ontology#DecorativeImage"
+      ],
+      "labels": [
+        "unlabeled image",
+        "decorative graphic",
+        "unlabeled graphic",
+        "decorative graphic",
+        "unlabeled image",
+        "unlabeled graphic",
+        "decorative graphic",
+        "decorative image",
+        "decorative graphic",
+        "unlabeled graphic"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#DecorativeImage",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 4,
+      "has_validity_flip": false
+    },
+    "bad-click-here-001": {
+      "tags": [
+        "command-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton"
+      ],
+      "labels": [
+        "click here",
+        "click here",
+        "click here",
+        "click here",
+        "click here",
+        "click here",
+        "click here",
+        "click here",
+        "click here",
+        "click here"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "bad-submit-001": {
+      "tags": [
+        "command-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton"
+      ],
+      "labels": [
+        "submit",
+        "submit",
+        "submit",
+        "submit",
+        "submit",
+        "submit",
+        "submit",
+        "submit",
+        "submit",
+        "submit"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "bad-ok-001": {
+      "tags": [
+        "command-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton"
+      ],
+      "labels": [
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "bad-upload-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "upload",
+        "upload file",
+        "upload",
+        "upload file",
+        "upload",
+        "upload",
+        "upload file",
+        "upload file",
+        "upload file",
+        "upload"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 2,
+      "has_validity_flip": false
+    },
+    "nexus-mute-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "electron",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-deafen-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "toggle deafen",
+        "deafen",
+        "toggle deafen",
+        "toggle deafen",
+        "deafen",
+        "toggle deafen",
+        "toggle deafen",
+        "deafen",
+        "deafen toggle",
+        "deafen"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 3,
+      "has_validity_flip": false
+    },
+    "nexus-video-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "start video call",
+        "video call",
+        "start video call",
+        "start video call",
+        "start video call",
+        "video call",
+        "start video call",
+        "start video call",
+        "start video call",
+        "video call"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 2,
+      "has_validity_flip": false
+    },
+    "nexus-video-off-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "toggle video",
+        "toggle video",
+        "toggle video",
+        "toggle video",
+        "toggle video",
+        "toggle video",
+        "toggle video",
+        "video off",
+        "video off",
+        "toggle video"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 2,
+      "has_validity_flip": false
+    },
+    "nexus-screenshare-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "share screen",
+        "share screen",
+        "screen share",
+        "share screen",
+        "screenshare",
+        "screen share",
+        "screenshare",
+        "screen share",
+        "screen share",
+        "start screen share"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 4,
+      "has_validity_flip": false
+    },
+    "nexus-reactions-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "reactions",
+        "reactions",
+        "reactions",
+        "reactions",
+        "reactions",
+        "reactions",
+        "reactions",
+        "reactions",
+        "reactions",
+        "reactions"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-participants-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "show participants",
+        "show participants",
+        "show participants",
+        "show participants",
+        "show participants",
+        "show participants",
+        "show participants",
+        "show participants",
+        "show participants",
+        "show participants"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-chat-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "chat",
+        "open chat",
+        "chat",
+        "chat",
+        "start chat",
+        "chat",
+        "chat",
+        "chat",
+        "open chat",
+        "start chat call"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 4,
+      "has_validity_flip": false
+    },
+    "nexus-end-call-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "end call",
+        "end call",
+        "end call",
+        "end call",
+        "end call",
+        "end call",
+        "end call",
+        "end call",
+        "end call",
+        "end call"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-tab-inbox-001": {
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab"
+      ],
+      "labels": [
+        "inbox",
+        "inbox",
+        "inbox",
+        "inbox",
+        "inbox",
+        "inbox",
+        "inbox",
+        "inbox",
+        "inbox",
+        "inbox"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-tab-sent-001": {
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab"
+      ],
+      "labels": [
+        "sent",
+        "sent",
+        "sent",
+        "sent",
+        "sent",
+        "sent",
+        "sent",
+        "sent",
+        "sent",
+        "sent"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-tab-drafts-001": {
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab"
+      ],
+      "labels": [
+        "drafts",
+        "drafts",
+        "drafts",
+        "drafts",
+        "drafts",
+        "drafts",
+        "drafts",
+        "drafts",
+        "drafts",
+        "drafts"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-tab-starred-001": {
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab"
+      ],
+      "labels": [
+        "starred",
+        "starred",
+        "starred",
+        "starred",
+        "starred",
+        "starred",
+        "starred",
+        "starred",
+        "starred",
+        "starred"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-tab-archive-001": {
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab"
+      ],
+      "labels": [
+        "archive",
+        "archive",
+        "archive",
+        "archive",
+        "archive",
+        "archive",
+        "archive",
+        "archive",
+        "archive",
+        "archive"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-tab-trash-001": {
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab",
+        "http://contextlabeler.org/ui-ontology#Tab"
+      ],
+      "labels": [
+        "trash",
+        "trash",
+        "trash",
+        "trash",
+        "trash",
+        "trash",
+        "trash",
+        "trash",
+        "trash",
+        "trash"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-compose-format-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "format text",
+        "format message",
+        "format message",
+        "format",
+        "format message",
+        "format message",
+        "format text",
+        "format text",
+        "format message",
+        "format message"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 3,
+      "has_validity_flip": false
+    },
+    "nexus-compose-attach-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "attach file",
+        "attach file",
+        "attach file",
+        "attach file",
+        "attach file",
+        "attach file",
+        "attach file",
+        "attach file",
+        "attach file",
+        "attach file"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-compose-discard-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "discard message",
+        "discard message",
+        "discard message",
+        "discard message",
+        "discard message",
+        "discard message",
+        "discard message",
+        "discard message",
+        "discard message",
+        "discard message"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-compose-send-001": {
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "send message",
+        "send message",
+        "send message",
+        "send message",
+        "send message",
+        "send message",
+        "send message",
+        "send message",
+        "send message",
+        "send message"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "nexus-file-option-001": {
+      "tags": [
+        "menu-item",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown"
+      ],
+      "labels": [
+        "unlabeled file option",
+        "unlabeled file option",
+        "unlabeled file option",
+        "unlabeled element",
+        "unlabeled file option",
+        "unlabeled option",
+        "unlabeled option",
+        "unlabeled element",
+        "unlabeled file option",
+        "unlabeled element"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#Unknown",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 3,
+      "has_validity_flip": false
+    },
+    "discord-mute-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "electron"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute",
+        "mute"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "discord-reply-001": {
+      "tags": [
+        "icon-button",
+        "electron"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "reply",
+        "reply",
+        "reply",
+        "reply",
+        "reply",
+        "reply",
+        "reply",
+        "reply",
+        "reply",
+        "reply"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "discord-react-001": {
+      "tags": [
+        "icon-button",
+        "electron"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "message action",
+        "message action",
+        "message action",
+        "message action",
+        "message action",
+        "message action",
+        "message action",
+        "message action",
+        "message action",
+        "message action"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "discord-more-001": {
+      "tags": [
+        "icon-button",
+        "electron"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "more options",
+        "more options",
+        "more options",
+        "more options",
+        "more options",
+        "more options",
+        "more options",
+        "more options",
+        "more options",
+        "more options"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "discord-server-001": {
+      "tags": [
+        "image",
+        "electron"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#FunctionalImage",
+        "http://contextlabeler.org/ui-ontology#FunctionalImage",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#FunctionalImage",
+        "http://contextlabeler.org/ui-ontology#FunctionalImage",
+        "http://contextlabeler.org/ui-ontology#FunctionalImage",
+        "http://contextlabeler.org/ui-ontology#FunctionalImage",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#FunctionalImage",
+        "http://contextlabeler.org/ui-ontology#FunctionalImage"
+      ],
+      "labels": [
+        "select server",
+        "server",
+        "server icon",
+        "server icon",
+        "server icon",
+        "select server",
+        "server button",
+        "server icon",
+        "select server",
+        "server button"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#FunctionalImage",
+      "category_agreement_rate": 0.8,
+      "distinct_labels": 4,
+      "has_validity_flip": false
+    },
+    "win32-notepad-find-001": {
+      "tags": [
+        "command-button",
+        "win32"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton"
+      ],
+      "labels": [
+        "find next",
+        "find next",
+        "find next",
+        "find next",
+        "find next",
+        "find next",
+        "find next",
+        "find next",
+        "find next",
+        "find next"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "win32-explorer-back-001": {
+      "tags": [
+        "icon-button",
+        "win32"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton"
+      ],
+      "labels": [
+        "back",
+        "back",
+        "back",
+        "back",
+        "back",
+        "back",
+        "back",
+        "back",
+        "back",
+        "back"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "category_agreement_rate": 0.8,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "win32-explorer-new-folder-001": {
+      "tags": [
+        "command-button",
+        "win32"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton"
+      ],
+      "labels": [
+        "new folder",
+        "new folder",
+        "new folder",
+        "new folder",
+        "new folder",
+        "new folder",
+        "new folder",
+        "new folder",
+        "new folder",
+        "new folder"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "win32-taskbar-battery-001": {
+      "tags": [
+        "status-icon",
+        "win32"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon"
+      ],
+      "labels": [
+        "battery status",
+        "battery status",
+        "battery status",
+        "battery status",
+        "battery status",
+        "battery status",
+        "battery status",
+        "battery status",
+        "battery status 87%",
+        "battery status"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#StatusIcon",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 2,
+      "has_validity_flip": false
+    },
+    "win32-taskbar-volume-001": {
+      "tags": [
+        "status-icon",
+        "win32"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "speakers 45 percent",
+        "speakers 45 percent",
+        "speakers 45%",
+        "speakers 45 percent",
+        "speakers 45 percent",
+        "speaker volume control",
+        "speakers volume control",
+        "speakers 45 percent",
+        "speakers 45 percent",
+        "speakers volume control"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 0.9,
+      "distinct_labels": 4,
+      "has_validity_flip": false
+    },
+    "browser-yt-play-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "play pause",
+        "play pause",
+        "play pause",
+        "play pause",
+        "play pause",
+        "play pause",
+        "play pause",
+        "play pause",
+        "play pause",
+        "play pause"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "browser-yt-like-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "like",
+        "like",
+        "like",
+        "like",
+        "like",
+        "like",
+        "like",
+        "like",
+        "like",
+        "like"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "browser-yt-subscribe-001": {
+      "tags": [
+        "command-button",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton"
+      ],
+      "labels": [
+        "subscribe",
+        "subscribe",
+        "subscribe",
+        "subscribe",
+        "subscribe",
+        "subscribe",
+        "subscribe",
+        "subscribe",
+        "subscribe",
+        "subscribe"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "browser-yt-fullscreen-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "fullscreen",
+        "fullscreen",
+        "fullscreen",
+        "fullscreen",
+        "fullscreen",
+        "fullscreen",
+        "toggle fullscreen",
+        "fullscreen",
+        "fullscreen",
+        "fullscreen"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 0.6,
+      "distinct_labels": 2,
+      "has_validity_flip": false
+    },
+    "browser-yt-search-001": {
+      "tags": [
+        "input",
+        "html"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput"
+      ],
+      "labels": [
+        "search",
+        "search",
+        "search",
+        "search",
+        "search",
+        "search",
+        "search",
+        "search",
+        "search",
+        "search"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#SearchInput",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "adv-misleading-class-001": {
+      "tags": [
+        "icon-button",
+        "adversarial",
+        "misleading-class"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete",
+        "delete"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "adv-empty-context-001": {
+      "tags": [
+        "adversarial",
+        "empty-context"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown",
+        "http://contextlabeler.org/ui-ontology#Unknown"
+      ],
+      "labels": [
+        "unlabeled element",
+        "unlabeled element",
+        "unlabeled element",
+        "unlabeled element",
+        "unlabeled element",
+        "unlabeled element",
+        "unlabeled element",
+        "unlabeled element",
+        "unlabeled element",
+        "unlabeled element"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#Unknown",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "adv-non-english-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "adversarial",
+        "non-english"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "mute",
+        "mute",
+        "mute audio",
+        "mute",
+        "mute",
+        "mute audio",
+        "mute",
+        "mute audio",
+        "mute",
+        "mute"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 2,
+      "has_validity_flip": false
+    },
+    "adv-prompt-injection-001": {
+      "tags": [
+        "icon-button",
+        "adversarial",
+        "prompt-injection"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "save",
+        "save",
+        "save",
+        "save",
+        "save document",
+        "save",
+        "save",
+        "save",
+        "save",
+        "save"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 2,
+      "has_validity_flip": false
+    },
+    "adv-ambiguous-star-001": {
+      "tags": [
+        "icon-button",
+        "toggle",
+        "adversarial",
+        "ambiguous"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+        "http://contextlabeler.org/ui-ontology#ToggleIconButton"
+      ],
+      "labels": [
+        "toggle favorite",
+        "favorite",
+        "favorite",
+        "add to favorites",
+        "toggle favorite",
+        "toggle favorite",
+        "favorite",
+        "favorite toggle",
+        "favorite",
+        "favorite"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 4,
+      "has_validity_flip": false
+    },
+    "adv-button-named-button-001": {
+      "tags": [
+        "command-button",
+        "adversarial",
+        "ambiguous"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton",
+        "http://contextlabeler.org/ui-ontology#CommandButton"
+      ],
+      "labels": [
+        "button",
+        "button",
+        "button",
+        "button",
+        "button",
+        "button",
+        "button",
+        "button",
+        "button",
+        "button"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "adv-dropdown-as-button-001": {
+      "tags": [
+        "adversarial",
+        "misleading-role"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "options menu",
+        "options menu",
+        "options menu",
+        "options menu",
+        "options toggle",
+        "options menu",
+        "options menu",
+        "options menu",
+        "options menu",
+        "options menu"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 2,
+      "has_validity_flip": false
+    },
+    "adv-spinner-001": {
+      "tags": [
+        "status-icon",
+        "adversarial"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon",
+        "http://contextlabeler.org/ui-ontology#StatusIcon"
+      ],
+      "labels": [
+        "loading",
+        "loading",
+        "loading",
+        "loading",
+        "loading",
+        "loading",
+        "loading",
+        "loading",
+        "loading",
+        "loading"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#StatusIcon",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "adv-icon-hidden-label-001": {
+      "tags": [
+        "icon-button",
+        "adversarial"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton",
+        "http://contextlabeler.org/ui-ontology#ActionIconButton"
+      ],
+      "labels": [
+        "close preferences",
+        "close preferences",
+        "close preferences",
+        "close preferences",
+        "close preferences",
+        "close preferences",
+        "close preferences",
+        "close preferences",
+        "close preferences",
+        "close preferences"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    },
+    "adv-text-input-as-search-001": {
+      "tags": [
+        "input",
+        "adversarial"
+      ],
+      "categories": [
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput",
+        "http://contextlabeler.org/ui-ontology#SearchInput"
+      ],
+      "labels": [
+        "filter results",
+        "filter results",
+        "filter results",
+        "filter results",
+        "filter results",
+        "filter results",
+        "filter results",
+        "filter results",
+        "filter results",
+        "filter results"
+      ],
+      "modal_category": "http://contextlabeler.org/ui-ontology#SearchInput",
+      "category_agreement_rate": 1.0,
+      "distinct_labels": 1,
+      "has_validity_flip": false
+    }
+  }
+}

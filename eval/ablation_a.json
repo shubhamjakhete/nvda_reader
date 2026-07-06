@@ -1,0 +1,1079 @@
+{
+  "metrics": {
+    "mode": "constrained",
+    "n_entries": 55,
+    "n_runs": 1,
+    "n_results": 55,
+    "errors": 0,
+    "category_accuracy": 0.855,
+    "label_accuracy": 0.745,
+    "invalid_category_rate": 0.0,
+    "fallback_recovery_rate": 0,
+    "latency_p50_s": 0.818,
+    "latency_p95_s": 1.723,
+    "per_tag": {
+      "adversarial": {
+        "n": 10,
+        "category_accuracy": 0.9,
+        "label_accuracy": 0.7,
+        "invalid_rate": 0.0
+      },
+      "ambiguous": {
+        "n": 2,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "command-button": {
+        "n": 7,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "electron": {
+        "n": 6,
+        "category_accuracy": 0.833,
+        "label_accuracy": 0.833,
+        "invalid_rate": 0.0
+      },
+      "empty-context": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "html": {
+        "n": 35,
+        "category_accuracy": 0.886,
+        "label_accuracy": 0.743,
+        "invalid_rate": 0.0
+      },
+      "icon-button": {
+        "n": 31,
+        "category_accuracy": 0.903,
+        "label_accuracy": 0.677,
+        "invalid_rate": 0.0
+      },
+      "image": {
+        "n": 3,
+        "category_accuracy": 0.333,
+        "label_accuracy": 0.333,
+        "invalid_rate": 0.0
+      },
+      "input": {
+        "n": 2,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "menu-item": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 0.0
+      },
+      "misleading-class": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 0.0
+      },
+      "misleading-role": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "non-english": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 0.0
+      },
+      "prompt-injection": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "status-icon": {
+        "n": 3,
+        "category_accuracy": 0.667,
+        "label_accuracy": 0.667,
+        "invalid_rate": 0.0
+      },
+      "tab": {
+        "n": 6,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "toggle": {
+        "n": 11,
+        "category_accuracy": 0.818,
+        "label_accuracy": 0.636,
+        "invalid_rate": 0.0
+      },
+      "win32": {
+        "n": 5,
+        "category_accuracy": 0.6,
+        "label_accuracy": 0.8,
+        "invalid_rate": 0.0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "bad-save-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "save",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.903
+    },
+    {
+      "id": "bad-trash-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "delete",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 1.127
+    },
+    {
+      "id": "bad-share-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "share",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 1.748
+    },
+    {
+      "id": "bad-mute-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "mute",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.817
+    },
+    {
+      "id": "bad-img-decorative-001",
+      "run": 0,
+      "tags": [
+        "image",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#DecorativeImage",
+      "raw_category": ":DecorativeImage",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#DecorativeImage",
+      "label": "decorative graphic",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.723
+    },
+    {
+      "id": "bad-img-brand-001",
+      "run": 0,
+      "tags": [
+        "image",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#InformativeImage",
+      "raw_category": ":DecorativeImage",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#DecorativeImage",
+      "label": "unlabeled graphic",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": false,
+      "label_correct": false,
+      "latency": 0.811
+    },
+    {
+      "id": "bad-click-here-001",
+      "run": 0,
+      "tags": [
+        "command-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "raw_category": ":CommandButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "label": "click here",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.786
+    },
+    {
+      "id": "bad-submit-001",
+      "run": 0,
+      "tags": [
+        "command-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "raw_category": ":CommandButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "label": "submit",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.69
+    },
+    {
+      "id": "bad-ok-001",
+      "run": 0,
+      "tags": [
+        "command-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "raw_category": ":CommandButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "label": "ok",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.659
+    },
+    {
+      "id": "bad-upload-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "upload",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 1.346
+    },
+    {
+      "id": "nexus-mute-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "electron",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "mute",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.876
+    },
+    {
+      "id": "nexus-deafen-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "toggle deafen",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.972
+    },
+    {
+      "id": "nexus-video-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "start video call",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": false,
+      "label_correct": false,
+      "latency": 1.333
+    },
+    {
+      "id": "nexus-video-off-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "toggle video",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.819
+    },
+    {
+      "id": "nexus-screenshare-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "screen share",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.815
+    },
+    {
+      "id": "nexus-reactions-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "reactions",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.734
+    },
+    {
+      "id": "nexus-participants-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "participants",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.801
+    },
+    {
+      "id": "nexus-chat-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "start chat",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 1.126
+    },
+    {
+      "id": "nexus-end-call-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "end call",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.733
+    },
+    {
+      "id": "nexus-tab-inbox-001",
+      "run": 0,
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "raw_category": ":Tab",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "label": "inbox",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.796
+    },
+    {
+      "id": "nexus-tab-sent-001",
+      "run": 0,
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "raw_category": ":Tab",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "label": "sent",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.827
+    },
+    {
+      "id": "nexus-tab-drafts-001",
+      "run": 0,
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "raw_category": ":Tab",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "label": "drafts",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.816
+    },
+    {
+      "id": "nexus-tab-starred-001",
+      "run": 0,
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "raw_category": ":Tab",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "label": "starred",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.605
+    },
+    {
+      "id": "nexus-tab-archive-001",
+      "run": 0,
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "raw_category": ":Tab",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "label": "archive",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.73
+    },
+    {
+      "id": "nexus-tab-trash-001",
+      "run": 0,
+      "tags": [
+        "tab",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "raw_category": ":Tab",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#Tab",
+      "label": "trash",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.761
+    },
+    {
+      "id": "nexus-compose-format-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "format message",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.67
+    },
+    {
+      "id": "nexus-compose-attach-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "attach file",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 1.231
+    },
+    {
+      "id": "nexus-compose-discard-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "discard message",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.82
+    },
+    {
+      "id": "nexus-compose-send-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "send message",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 2.662
+    },
+    {
+      "id": "nexus-file-option-001",
+      "run": 0,
+      "tags": [
+        "menu-item",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#MenuItem",
+      "raw_category": ":Unknown",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#Unknown",
+      "label": "unlabeled option",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": false,
+      "label_correct": false,
+      "latency": 0.62
+    },
+    {
+      "id": "discord-mute-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "electron"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "mute",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.709
+    },
+    {
+      "id": "discord-reply-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "electron"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "reply",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.919
+    },
+    {
+      "id": "discord-react-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "electron"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "message action",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.926
+    },
+    {
+      "id": "discord-more-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "electron"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "more options",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.717
+    },
+    {
+      "id": "discord-server-001",
+      "run": 0,
+      "tags": [
+        "image",
+        "electron"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#FunctionalImage",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "server icon",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": false,
+      "label_correct": true,
+      "latency": 0.921
+    },
+    {
+      "id": "win32-notepad-find-001",
+      "run": 0,
+      "tags": [
+        "command-button",
+        "win32"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "raw_category": ":CommandButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "label": "find next",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 1.228
+    },
+    {
+      "id": "win32-explorer-back-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "win32"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":CommandButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "label": "back",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": false,
+      "label_correct": true,
+      "latency": 0.76
+    },
+    {
+      "id": "win32-explorer-new-folder-001",
+      "run": 0,
+      "tags": [
+        "command-button",
+        "win32"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "raw_category": ":CommandButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "label": "new folder",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.872
+    },
+    {
+      "id": "win32-taskbar-battery-001",
+      "run": 0,
+      "tags": [
+        "status-icon",
+        "win32"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#StatusIcon",
+      "raw_category": ":StatusIcon",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#StatusIcon",
+      "label": "battery status",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 1.126
+    },
+    {
+      "id": "win32-taskbar-volume-001",
+      "run": 0,
+      "tags": [
+        "status-icon",
+        "win32"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#StatusIcon",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "speakers 45 percent",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": false,
+      "label_correct": false,
+      "latency": 1.02
+    },
+    {
+      "id": "browser-yt-play-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "play pause",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.7
+    },
+    {
+      "id": "browser-yt-like-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "like",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.741
+    },
+    {
+      "id": "browser-yt-subscribe-001",
+      "run": 0,
+      "tags": [
+        "command-button",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "raw_category": ":CommandButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "label": "subscribe",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.71
+    },
+    {
+      "id": "browser-yt-fullscreen-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "fullscreen",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": false,
+      "label_correct": true,
+      "latency": 1.023
+    },
+    {
+      "id": "browser-yt-search-001",
+      "run": 0,
+      "tags": [
+        "input",
+        "html"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#SearchInput",
+      "raw_category": ":SearchInput",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#SearchInput",
+      "label": "search",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.757
+    },
+    {
+      "id": "adv-misleading-class-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "adversarial",
+        "misleading-class"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "delete",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.881
+    },
+    {
+      "id": "adv-empty-context-001",
+      "run": 0,
+      "tags": [
+        "adversarial",
+        "empty-context"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#Unknown",
+      "raw_category": ":Unknown",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#Unknown",
+      "label": "unlabeled element",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 1.723
+    },
+    {
+      "id": "adv-non-english-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "adversarial",
+        "non-english"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "mute audio",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.737
+    },
+    {
+      "id": "adv-prompt-injection-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "adversarial",
+        "prompt-injection"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "save",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 1.429
+    },
+    {
+      "id": "adv-ambiguous-star-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "toggle",
+        "adversarial",
+        "ambiguous"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "raw_category": ":ToggleIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ToggleIconButton",
+      "label": "favorite",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.818
+    },
+    {
+      "id": "adv-button-named-button-001",
+      "run": 0,
+      "tags": [
+        "command-button",
+        "adversarial",
+        "ambiguous"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "raw_category": ":CommandButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#CommandButton",
+      "label": "button",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.823
+    },
+    {
+      "id": "adv-dropdown-as-button-001",
+      "run": 0,
+      "tags": [
+        "adversarial",
+        "misleading-role"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#Dropdown",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "options menu",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": false,
+      "label_correct": true,
+      "latency": 1.022
+    },
+    {
+      "id": "adv-spinner-001",
+      "run": 0,
+      "tags": [
+        "status-icon",
+        "adversarial"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#StatusIcon",
+      "raw_category": ":StatusIcon",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#StatusIcon",
+      "label": "loading",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 0.635
+    },
+    {
+      "id": "adv-icon-hidden-label-001",
+      "run": 0,
+      "tags": [
+        "icon-button",
+        "adversarial"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "raw_category": ":ActionIconButton",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#ActionIconButton",
+      "label": "close preferences",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": false,
+      "latency": 0.8
+    },
+    {
+      "id": "adv-text-input-as-search-001",
+      "run": 0,
+      "tags": [
+        "input",
+        "adversarial"
+      ],
+      "expected_category": "http://contextlabeler.org/ui-ontology#SearchInput",
+      "raw_category": ":SearchInput",
+      "expanded_category": "http://contextlabeler.org/ui-ontology#SearchInput",
+      "label": "filter results",
+      "is_valid_leaf": true,
+      "ancestor_fallback": null,
+      "category_correct": true,
+      "label_correct": true,
+      "latency": 2.045
+    }
+  ]
+}

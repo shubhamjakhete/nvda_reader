@@ -1,0 +1,249 @@
+{
+  "condition_a": {
+    "mode": "constrained",
+    "n_entries": 55,
+    "n_runs": 1,
+    "n_results": 55,
+    "errors": 0,
+    "category_accuracy": 0.855,
+    "label_accuracy": 0.745,
+    "invalid_category_rate": 0.0,
+    "fallback_recovery_rate": 0,
+    "latency_p50_s": 0.818,
+    "latency_p95_s": 1.723,
+    "per_tag": {
+      "adversarial": {
+        "n": 10,
+        "category_accuracy": 0.9,
+        "label_accuracy": 0.7,
+        "invalid_rate": 0.0
+      },
+      "ambiguous": {
+        "n": 2,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "command-button": {
+        "n": 7,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "electron": {
+        "n": 6,
+        "category_accuracy": 0.833,
+        "label_accuracy": 0.833,
+        "invalid_rate": 0.0
+      },
+      "empty-context": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "html": {
+        "n": 35,
+        "category_accuracy": 0.886,
+        "label_accuracy": 0.743,
+        "invalid_rate": 0.0
+      },
+      "icon-button": {
+        "n": 31,
+        "category_accuracy": 0.903,
+        "label_accuracy": 0.677,
+        "invalid_rate": 0.0
+      },
+      "image": {
+        "n": 3,
+        "category_accuracy": 0.333,
+        "label_accuracy": 0.333,
+        "invalid_rate": 0.0
+      },
+      "input": {
+        "n": 2,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "menu-item": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 0.0
+      },
+      "misleading-class": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 0.0
+      },
+      "misleading-role": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "non-english": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 0.0
+      },
+      "prompt-injection": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "status-icon": {
+        "n": 3,
+        "category_accuracy": 0.667,
+        "label_accuracy": 0.667,
+        "invalid_rate": 0.0
+      },
+      "tab": {
+        "n": 6,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "toggle": {
+        "n": 11,
+        "category_accuracy": 0.818,
+        "label_accuracy": 0.636,
+        "invalid_rate": 0.0
+      },
+      "win32": {
+        "n": 5,
+        "category_accuracy": 0.6,
+        "label_accuracy": 0.8,
+        "invalid_rate": 0.0
+      }
+    }
+  },
+  "condition_b": {
+    "mode": "freeform",
+    "n_entries": 55,
+    "n_runs": 1,
+    "n_results": 55,
+    "errors": 0,
+    "category_accuracy": 0.127,
+    "label_accuracy": 0.473,
+    "invalid_category_rate": 0.836,
+    "fallback_recovery_rate": 0.978,
+    "latency_p50_s": 0.837,
+    "latency_p95_s": 1.639,
+    "per_tag": {
+      "adversarial": {
+        "n": 10,
+        "category_accuracy": 0.1,
+        "label_accuracy": 0.3,
+        "invalid_rate": 0.8
+      },
+      "ambiguous": {
+        "n": 2,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 1.0
+      },
+      "command-button": {
+        "n": 7,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.429,
+        "invalid_rate": 1.0
+      },
+      "electron": {
+        "n": 6,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.5,
+        "invalid_rate": 1.0
+      },
+      "empty-context": {
+        "n": 1,
+        "category_accuracy": 1.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 0.0
+      },
+      "html": {
+        "n": 35,
+        "category_accuracy": 0.171,
+        "label_accuracy": 0.571,
+        "invalid_rate": 0.8
+      },
+      "icon-button": {
+        "n": 31,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.484,
+        "invalid_rate": 1.0
+      },
+      "image": {
+        "n": 3,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 1.0
+      },
+      "input": {
+        "n": 2,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.5,
+        "invalid_rate": 0.0
+      },
+      "menu-item": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 1.0
+      },
+      "misleading-class": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 1.0
+      },
+      "misleading-role": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 1.0
+      },
+      "non-english": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 1.0
+      },
+      "prompt-injection": {
+        "n": 1,
+        "category_accuracy": 0.0,
+        "label_accuracy": 1.0,
+        "invalid_rate": 1.0
+      },
+      "status-icon": {
+        "n": 3,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.333,
+        "invalid_rate": 1.0
+      },
+      "tab": {
+        "n": 6,
+        "category_accuracy": 1.0,
+        "label_accuracy": 0.833,
+        "invalid_rate": 0.0
+      },
+      "toggle": {
+        "n": 11,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.182,
+        "invalid_rate": 1.0
+      },
+      "win32": {
+        "n": 5,
+        "category_accuracy": 0.0,
+        "label_accuracy": 0.0,
+        "invalid_rate": 1.0
+      }
+    }
+  },
+  "freeform_pct_caught_by_ontology": 0.836
+}
