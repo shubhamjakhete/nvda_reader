@@ -1,10 +1,16 @@
 # contextLabeler — Ontology-Constrained AI Labeling for NVDA
 
-An NVDA add-on that speaks meaningful labels for unlabeled UI elements — icon buttons, alt-less images, custom widgets — using Claude AI validated against a hand-edited W3C ontology.
+### Problem Statement
 
-**The problem:** Screen readers depend on developers correctly labeling UI elements. In practice, large portions of modern apps fail this. When a blind user navigates to an unlabeled button, NVDA announces *"button"* — no label, no context. Trial-and-error activation is slow and risky.
+Screen readers such as NVDA depend on developers to provide accessible labels for user interface elements. However, many modern applications contain unlabeled controls, causing NVDA to announce only generic information such as "button" without describing the element's purpose. As a result, blind and low vision users must rely on trial-and-error interactions to determine the function of these controls, making navigation slow, frustrating, and potentially risky.
 
-**The fix:** Press `NVDA+Shift+L` on any unlabeled element. The add-on extracts context from the focused element, sends it to Claude Haiku, validates the response against a local ontology, and speaks a label — all in under 2 seconds.
+### Project Goal
+
+Blind and low vision users rely on NVDA (NonVisual Desktop Access), a free, open-source screen reader that converts on-screen content into speech or Braille, to navigate Windows applications. This project develops an NVDA add-on that provides meaningful spoken labels for unlabeled user interface elements—such as icon buttons, images without alternative text, and custom widgets—to improve navigation in inaccessible applications.
+
+### Solution
+
+The proposed add-on allows users to press `NVDA+Shift+L` when focused on an unlabeled element. It extracts contextual information from the focused UI element, sends it to Claude Haiku to generate a descriptive label, validates the generated label against a locally maintained W3C-based ontology, and then speaks the validated label through NVDA. The entire process completes in under two seconds, providing fast, context-aware accessibility assistance while improving usability without requiring changes to the underlying application.
 
 ```
 [user presses NVDA+Shift+L on an icon button]

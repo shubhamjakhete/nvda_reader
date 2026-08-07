@@ -45,6 +45,31 @@ class Ontology:
         label = self._g.value(URIRef(uri), RDFS.label)
         return str(label) if label else uri.rsplit("#", 1)[-1]
 
+    def is_known_class(self, uri: str) -> bool:
+        """True if uri is any class in the UIElement subtree (leaf or intermediate)."""
+        from .queries import IS_KNOWN_CLASS
+        result = self._g.query(IS_KNOWN_CLASS, initBindings={"node": URIRef(uri)})
+        return bool(result.askAnswer)
+
+    def nearest_valid_ancestor(self, uri: str) -> "str | None":
+        """Walk up rdfs:subClassOf from uri; return the first class inside the
+        :UIElement tree, or None if the uri is entirely unknown to the graph.
+        If uri is itself an intermediate class (e.g. :Button), returns uri."""
+        visited = set()
+        queue = [uri]
+        while queue:
+            current = queue.pop(0)
+            if current in visited:
+                continue
+            visited.add(current)
+            if self.is_known_class(current):
+                return current
+            for parent in self._g.objects(URIRef(current), RDFS.subClassOf):
+                parent_str = str(parent)
+                if parent_str not in visited:
+                    queue.append(parent_str)
+        return None
+
     def ancestors(self, uri: str) -> list:
         from .queries import ANCESTORS
         return [

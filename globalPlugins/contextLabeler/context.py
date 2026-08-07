@@ -74,6 +74,24 @@ def extract(obj) -> dict:
     except Exception:
         window_title = ""
 
+    automation_id = ""
+    try:
+        automation_id = obj.UIAElement.currentAutomationId or ""
+    except Exception:
+        pass
+
+    position_in_parent = -1
+    if parent is not None:
+        try:
+            for i, child in enumerate(parent.children):
+                if child is obj:
+                    position_in_parent = i
+                    break
+                if i >= 99:
+                    break
+        except Exception:
+            pass
+
     return {
         "role": role,
         "name": name,
@@ -86,4 +104,6 @@ def extract(obj) -> dict:
         "parent_role": parent_role,
         "sibling_names": sibling_names,
         "window_title": window_title,
+        "automation_id": automation_id,
+        "position_in_parent": position_in_parent,
     }

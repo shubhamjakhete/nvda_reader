@@ -26,3 +26,19 @@ SELECT ?ancestor ?label WHERE {
   ?ancestor rdfs:label ?label .
 }
 """
+
+IS_KNOWN_CLASS = PREFIXES + """
+ASK {
+  ?node rdfs:subClassOf+ :UIElement .
+}
+"""
+
+ANCESTORS_BY_DEPTH = PREFIXES + """
+SELECT ?ancestor (COUNT(?mid) AS ?depth) WHERE {
+  ?node rdfs:subClassOf+ ?ancestor .
+  ?ancestor rdfs:subClassOf* ?mid .
+  ?mid rdfs:subClassOf* :UIElement .
+}
+GROUP BY ?ancestor
+ORDER BY DESC(?depth)
+"""
